@@ -30,7 +30,7 @@ public class DataBaseConnectionExample {
 
 
     }
-    //insert a row/multyple in a table if the table is empty
+    //insert a row/multiply in a table if the table is empty
     public static void initializeMarketingCampaign(Connection connection){
         try {
             Statement statement=DatabaseConnection.getConnection().createStatement();
@@ -41,6 +41,8 @@ public class DataBaseConnectionExample {
                         "('Name1' ,'2022-12-18','1000'),('Name2' ,'2022-10-15','3000'),('Name3' ,'2022-10-20','500')");
                 System.out.println("The table marketing_campaign was initializer!");
 
+            }else {
+                System.out.println("The table was already initialized!");
             }
         } catch (SQLException e) {
             throw new RuntimeException(e);
